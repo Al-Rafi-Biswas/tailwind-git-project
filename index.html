@@ -1,0 +1,461 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="./output.css" rel="stylesheet">
+</head>
+<body>
+    
+  <h1 class="text-center p-4 mb-1 text-white bg-black font-bold text-[50px]">
+    wellcome my tailwind new projects <span class="text-blue-600">!</span>
+  </h1>
+
+  <section>
+    <div>
+        <!-- example -->
+        <nav class="bg-gray-800">
+            <div class="mx-auto max-w-7xl px-2 sm:px-6 lg:px-8">
+              <div class="relative flex h-16 items-center justify-between">
+                <div class="absolute inset-y-0 left-0 flex items-center sm:hidden">
+                  <!-- Mobile menu button-->
+                  <button type="button" class="relative inline-flex items-center justify-center rounded-md p-2 text-gray-400 hover:bg-gray-700 hover:text-white focus:outline-none focus:ring-2 focus:ring-inset focus:ring-white" aria-controls="mobile-menu" aria-expanded="false">
+                    <span class="absolute -inset-0.5"></span>
+                    <span class="sr-only">Open main menu</span>
+                    <!--
+                      Icon when menu is closed.
+          
+                      Menu open: "hidden", Menu closed: "block"
+                    -->
+                    <svg class="block h-6 w-6" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true">
+                      <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
+                    </svg>
+                    <!--
+                      Icon when menu is open.
+          
+                      Menu open: "block", Menu closed: "hidden"
+                    -->
+                    <svg class="hidden h-6 w-6" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true">
+                      <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
+                    </svg>
+                  </button>
+                </div>
+                <div class="flex flex-1 items-center justify-center sm:items-stretch sm:justify-start">
+                  <div class="flex flex-shrink-0 items-center">
+                    <img class="h-8 w-auto" src="https://tailwindui.com/img/logos/mark.svg?color=indigo&shade=500" alt="Your Company">
+                  </div>
+                  <div class="hidden sm:ml-6 sm:block">
+                    <div class="flex space-x-4">
+                      <!-- Current: "bg-gray-900 text-white", Default: "text-gray-300 hover:bg-gray-700 hover:text-white" -->
+                      <a href="#" class="rounded-md hover:bg-[#0355CC] px-3 py-2 text-sm font-medium text-white" aria-current="page">Dashboard</a>
+                      <a href="#" class="rounded-md px-3 py-2 text-sm font-medium text-gray-300 hover:bg-[#0355CC] hover:text-white">Team</a>
+                      <a href="#" class="rounded-md px-3 py-2 text-sm font-medium text-gray-300 hover:bg-[#0355CC] hover:text-white">Projects</a>
+                      <a href="#" class="rounded-md px-3 py-2 text-sm font-medium text-gray-300 hover:bg-[#0355CC] hover:text-white">Calendar</a>
+                    </div>
+                  </div>
+                </div>
+                <div class="absolute inset-y-0 right-0 flex items-center pr-2 sm:static sm:inset-auto sm:ml-6 sm:pr-0">
+                  <button type="button" class="relative rounded-full bg-gray-800 p-1 text-gray-400 hover:text-white focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-gray-800">
+                    <span class="absolute -inset-1.5"></span>
+                    <span class="sr-only">View notifications</span>
+                    <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true">
+                      <path stroke-linecap="round" stroke-linejoin="round" d="M14.857 17.082a23.848 23.848 0 005.454-1.31A8.967 8.967 0 0118 9.75v-.7V9A6 6 0 006 9v.75a8.967 8.967 0 01-2.312 6.022c1.733.64 3.56 1.085 5.455 1.31m5.714 0a24.255 24.255 0 01-5.714 0m5.714 0a3 3 0 11-5.714 0" />
+                    </svg>
+                  </button>
+          
+                  <!-- Profile dropdown -->
+                  <div class="relative ml-3">
+                    <div>
+                      <button type="button" class="relative flex rounded-full bg-gray-800 text-sm focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-gray-800" id="user-menu-button" aria-expanded="false" aria-haspopup="true">
+                        <span class="absolute -inset-1.5"></span>
+                        <span class="sr-only">Open user menu</span>
+                        <img class="h-8 w-8 rounded-full" src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80" alt="">
+                      </button>
+                    </div>
+          
+                    <!--
+                      Dropdown menu, show/hide based on menu state.
+          
+                      Entering: "transition ease-out duration-100"
+                        From: "transform opacity-0 scale-95"
+                        To: "transform opacity-100 scale-100"
+                      Leaving: "transition ease-in duration-75"
+                        From: "transform opacity-100 scale-100"
+                        To: "transform opacity-0 scale-95"
+                    -->
+
+                  </div>
+                </div>
+              </div>
+            </div>
+          
+            <!-- Mobile menu, show/hide based on menu state. -->
+            <div class="sm:hidden" id="mobile-menu">
+              <div class="space-y-1 px-2 pb-3 pt-2">
+                <!-- Current: "bg-gray-900 text-white", Default: "text-gray-300 hover:bg-gray-700 hover:text-white" -->
+                <a href="#" class="block rounded-md bg-gray-900 px-3 py-2 text-base font-medium text-white" aria-current="page">Dashboard</a>
+                <a href="#" class="block rounded-md px-3 py-2 text-base font-medium text-gray-300 hover:bg-gray-700 hover:text-white">Team</a>
+                <a href="#" class="block rounded-md px-3 py-2 text-base font-medium text-gray-300 hover:bg-gray-700 hover:text-white">Projects</a>
+                <a href="#" class="block rounded-md px-3 py-2 text-base font-medium text-gray-300 hover:bg-gray-700 hover:text-white">Calendar</a>
+              </div>
+            </div>
+          </nav>
+          
+         <!-- example -->
+    </div>
+  </section>
+
+
+
+
+  <div class="bg-[#D1E3FF] flex min-h-screen ">
+    <div class="body-1-img  w-[50%]">
+       <img src="slider-img.png" alt="photo" class="h-[100vh] w-[90%]">
+    </div>
+    <div class=" w-[50%]">
+       <h1 class="text-[#0355CC] text-[50px]  leading-[50px] font-semibold  flex mt-[20%] text-start">Repair and <br> Maintenance <br> Services</h1>
+       <p class="text-start  text-gray-500 mt-8 text-[18px] ">
+           Lorem ipsum dolor sit amet, consectetur adipisicing elit. <br>
+           Sapiente eum amet molestias sed obcaecati aliquid perspiciatis? <br>
+           Eligendi voluptates error illum quia optio assumenda doloremque.
+       </p>
+       <a href="#" class="text-center border-2 border-[#0366e1] text-[20px]  p-4 leading-[100px] px-24 rounded-lg text-[#0366E1] hover:bg-[#0366E1] hover:text-white ">Contact</a>
+    </div>
+  </div>
+
+
+
+
+
+  <!-- body-part-2 -->
+ 
+
+
+ <div class="mt-[-5%] w-full relative ">
+    
+  
+     <div class="flex flex-wrap justify-center">
+  
+  
+      <div class="flex flex-col bg-white hover:bg-[#0366e1] rounded-lg shadow-md w-full m-8 hover:m-2 overflow-hidden sm:w-80 transition duration-500 p-5">
+  
+        <img src="s1.png" alt="" class="h-40 m-6">
+  
+        <h2 class="text-center px-2 pb-5 text-blue-700 hover:text-white">Database support</h2>
+  
+      </div>
+  
+      <div class="flex flex-col bg-[#0366e1] rounded-lg shadow-md w-full m-4 overflow-hidden sm:w-80 p-5">
+  
+        <img src="s2.png" alt="" class="h-40 m-6  rounded-md overflow-hidden p-5 ">
+  
+        <h2 class="text-center px-2 pb-5 text-white">Database support</h2>
+  
+      </div>
+  
+      <div class="flex flex-col bg-white hover:bg-[#0366e1] rounded-lg shadow-md w-full m-8 hover:m-2 overflow-hidden sm:w-80 transition duration-500 p-5">
+  
+        <img src="s3.png" alt="" class="h-40 m-6 ">
+  
+        <h2 class="text-center px-2 pb-5 text-blue-700 hover:text-white">Database support</h2>
+  
+      </div>
+  
+     </div>
+  </div>
+
+<!-- 3rd option-start -->
+
+<section class="mt-14 flex flex-row  ">
+  <div class="flex m-14  justify-between min-h-screen">
+     <div class="text-center mt-10">
+      <h1 class="text-center text-blue-600 font-bold text-[40px] mb-5">About us</h1>
+      <p class="text-start text-gray-600 text-[22px]  mb-[20%] mt-10">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. <br>
+        Hic dolorum officia, ipsa cumque deleniti enim, dolorem sit <br>
+        doloribus vel ratione ea labore quaerat voluptas odio? <br>
+        Omnis commodi dolore quo fugit.
+      </p>
+      <a href="#" class="text-blue-600 hover:text-white hover:bg-[#0366e1] border-2 border-blue-500 rounded-lg shadow-lg overflow-hidden transition duration-700 px-16 py-5">READ MORE</a>
+     </div>
+
+     <div class="">
+      <img src="file:///C:/Users/Lenovo/Desktop/inance/inance-html/images/about-img.jpg" alt="" class="h-auto w-full ml-12 p-4 ">
+     </div>
+
+  </div>
+</section>
+
+
+ <!-- 3rd-option-end -->
+
+
+ <section class="bg-blue-300 mt-[12px] p-[20px]">
+
+  <div class="flex flex-row justify-between min-h-screen">
+     <div class="flex flex-col justify-center items-center m-14">
+       <img src="file:///C:/Users/Lenovo/Desktop/inance/inance-html/images/professional-img.png" alt="" class=" h-[90vh] w-full">
+     </div>
+     <div class="flex flex-col justify-center items-start m-16">
+        <h1 class="text-[34px] font-bold leading-[32px] text-blue-600 text-start">We Provide Professional <br>
+          Home Services. </h1>
+          <p class="text-[22px] text-start mt-10 mb-8">
+            Lorem ipsum dolor sit amet, consectetur adipisicing <br>
+            elit. Aperiam, eligendi dolorem saepe dolor ab suscipit, <br>
+            repudiandae minima neque asperiores velit deleniti quae <br>
+            odit veniam? Ex labore quia aperiam perspiciatis quasi <br>
+            et, alias tempora esse adipisci.
+          </p>
+          <a href="#" class="border-2 border-blue-600 rounded-lg shadow-lg px-12 py-3 mt-10 hover:bg-blue-700 overflow-hidden transition duration-700 text-center hover:text-white">RED MORE</a>
+     </div>
+  </div>
+
+ </section>
+
+
+ <!-- 5th option-start -->
+
+ <section class="mt-10 max-h-screen mb-10">
+ <h1 class="text-center text-blue-600 font-bold text-[32px]">OUR SERVICES</h1>
+
+
+ <!--card-ooption  -->
+ <div class="flex flex-row justify-center items-center mt-14 relative">
+
+ 
+    <div class="m-6 p-10 h-60 w-80 bg-white rounded-md  hover:shadow-2xl hover:bg-blue-600 border-2 border-blue-600 hover:text-white transition-all duration-1000">
+      <div class="flex flex-col  justify-center items-center">
+        <img src="file:///C:/Users/Lenovo/Desktop/inance/inance-html/images/s1.png "  alt="" class="h-[60px] w-auto m-2">
+        <h1 class="text-center  font-semibold text-[18px]">Maintainence</h1>
+        <p class="text-center text-[14px]">Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt nulla mollitia totam doloribus adipisci odio.</p>
+      </div>
+    </div>
+
+     
+    <div class="m-6 p-10 h-60 w-80 bg-white rounded-md  hover:shadow-2xl hover:bg-blue-600 border-2 border-blue-600 hover:text-white transition-all duration-1000">
+      <div class="flex flex-col  justify-center items-center">
+        <img src="file:///C:/Users/Lenovo/Desktop/inance/inance-html/images/s2.png "  alt="" class="h-[60px] w-auto m-2">
+        <h1 class="text-center  font-semibold text-[18px]">Electrical</h1>
+        <p class="text-center text-[14px]">Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt nulla mollitia totam doloribus adipisci odio.</p>
+      </div>
+    </div>
+
+     
+    <div class="m-6 p-10 h-60 w-80 bg-white rounded-md  hover:shadow-2xl hover:bg-blue-600 border-2 border-blue-600 hover:text-white transition-all duration-1000">
+      <div class="flex flex-col  justify-center items-center">
+        <img src="file:///C:/Users/Lenovo/Desktop/inance/inance-html/images/s1.png "  alt="" class="h-[60px] w-auto m-2">
+        <h1 class="text-center  font-semibold text-[18px]">Maintainence</h1>
+        <p class="text-center text-[14px]">Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt nulla mollitia totam doloribus adipisci odio.</p>
+      </div>
+    </div>
+
+     
+    <div class="m-6 p-10 h-60 w-80 bg-white rounded-md  hover:shadow-2xl hover:bg-blue-600 border-2 border-blue-600 hover:text-white transition-all duration-1000">
+      <div class="flex flex-col  justify-center items-center">
+        <img src="file:///C:/Users/Lenovo/Desktop/inance/inance-html/images/s3.png "  alt="" class="h-[60px] w-auto m-2">
+        <h1 class="text-center  font-semibold text-[18px]">Plambing</h1>
+        <p class="text-center text-[14px]">Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt nulla mollitia totam doloribus adipisci odio.</p>
+      </div>
+    </div>
+
+  
+
+ </div>
+ <!-- card-option -->
+
+
+ <div class="flex justify-center items-center mt-16 ">
+  <a href="#" class="border-2 border-blue-600 px-12 py-3 hover:bg-blue-600 hover:text-white overflow-hidden shadow-xl text-center text-[20px]">VIEW MORE</a>
+ </div>
+ 
+
+ </section>
+
+ <!-- 5th-option-end -->
+
+
+ <!-- 6th-opotion-start -->
+
+<section>
+  <div class="flex flex-wrap justify-center items-center">
+    <!-- first -->
+    <div class="m-5 h-60 w-[550px] border-2 border-blue-600 hover:bg-blue-200 shadow-xl transition-all duration-1000">
+      
+      <div class="flex flex-row justify-start m-5 items-center gap-2"> 
+
+        <div>
+          <img src="file:///C:/Users/Lenovo/Desktop/inance/inance-html/images/client-1.jpg" alt="" class="h-[100px] w-[100px] rounded-full ring-2 overflow-hidden shadow-2xl">
+        </div>
+        
+         <div>
+           <h3 class="text-[22px] px-5 font-semibold">jon morich</h3>
+           <div class="flex flex-row justify-start items-center mx-5">
+            <i class="fa-solid fa-star text-blue-600"></i>
+            <i class="fa-solid fa-star text-blue-600"></i>
+            <i class="fa-solid fa-star text-blue-600"></i>
+            <i class="fa-solid fa-star text-blue-600"></i>
+            <i class="fa-regular fa-star"></i>
+           </div>
+           
+         </div>
+        
+      </div>
+      <p class="text-center ">
+        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Accusamus natus doloremque minima dolorem adipisci ut amet exercitationem sint. Sint, consequatur!
+      </p>
+
+    </div>
+
+   
+    <!-- second -->
+
+
+    <div class="m-5 h-60 w-[550px] border-2 border-blue-600 hover:bg-blue-200 shadow-xl transition-all duration-1000">
+      
+      <div class="flex flex-row justify-start m-5 items-center gap-2"> 
+
+        <div>
+          <img src="file:///C:/Users/Lenovo/Desktop/inance/inance-html/images/client-1.jpg" alt="" class="h-[100px] w-[100px] rounded-full ring-2 overflow-hidden shadow-2xl">
+        </div>
+        
+         <div>
+           <h3 class="text-[22px] px-5 font-semibold">jon morich</h3>
+           <div class="flex flex-row justify-start items-center mx-5">
+            <i class="fa-solid fa-star text-blue-600"></i>
+            <i class="fa-solid fa-star text-blue-600"></i>
+            <i class="fa-solid fa-star text-blue-600"></i>
+            <i class="fa-solid fa-star text-blue-600"></i>
+            <i class="fa-regular fa-star"></i>
+           </div>
+           
+         </div>
+        
+      </div>
+      <p class="text-center ">
+        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Accusamus natus doloremque minima dolorem adipisci ut amet exercitationem sint. Sint, consequatur!
+      </p>
+
+    </div>
+  </div>
+
+
+  <!-- arrow -->
+
+  <div class="flex justify-center items-center gap-6">
+
+    <div class="bg-blue-600 h-10 w-20 px-8 py-2 flex justify-center items-center">
+      <i class="fa-solid fa-arrow-right" style="color: #edebeb;" ></i>
+    </div>
+  
+    <div class="bg-blue-600 h-10 w-20 px-8 py-2 flex justify-center items-center">
+      <i class="fa-solid fa-arrow-right fa-rotate-180" style="color: #f3f1f1;"></i>
+    </div>
+
+  </div>
+
+
+</section>
+ 
+  <!-- 6th-option-end -->
+
+<!-- 7th-optiion-start -->
+<section class="mt-14">
+
+  <div class=" flex justify-center items-center overflow-hidden  ">
+
+    <div class="flex flex-col justify-start items-start">
+      <div class="flex m-4 justify-center items-center">
+        <h1 class="font-bold text-[42px] text-blue-600 leading-[40px] ">CONTACT</h1>
+      </div>
+   
+        <form action="#">
+
+          <div class="m-5">
+            <input type="text" placeholder="Enter your Name" class="border-2 border-blue-600 px-[120px] py-4 shadow-xl"> <br>
+          </div>
+          <div class="m-5">
+            <input type="text" placeholder="Enter your phone Number" class="border-2 border-blue-600 px-[120px] py-4 shadow-xl"> <br>
+          </div>
+          <div class="m-5">
+            <input type="text" placeholder="Enter your email" class=" border-2 border-blue-600 px-[120px] py-4 shadow-xl">
+          </div>
+          <div class="m-5">
+            <input type="massage" placeholder="Massage" class=" border-2 border-blue-600  px-[120px] py-16 shadow-xl">
+          </div>
+
+          
+
+        </form>
+
+        <a href="#" class="text-[24px] text-white bg-blue-600 border-2 border-blue-600 px-8 m-4 py-2">SEND</a>
+      
+    </div>
+    <div class="flex flex-col justify-center items-center shadow-xl">
+      <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d14780.965304131832!2d90.14013924999999!3d22.1548841!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sbn!2sbd!4v1726080201554!5m2!1sbn!2sbd" width="500" height="550" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+    </div>
+
+  </div>
+
+</section>
+<!-- 7th-option-end -->
+
+
+<!-- 8th-option-strat -->
+
+<section>
+  <div class="bg-[#0A0F43] h-[110vh] w-full ">
+    <h1 class="text-white text-center text-[42px] pt-[5%]">GET IN TOUCH</h1>
+
+    <div class="flex flex-row justify-center items-center mt-[12%]">
+       <div class="mt-10 h-1 w-[800px] bg-white flex justify-center items-center text-center"></div>
+    </div>
+
+    <div class="flex justify-center items-center gap-[330px] mt-[-4%]">
+      <div class="bg-blue-800 hover:bg-blue-500 transition duration-700 h-[100px] w-[100px] rounded-full shadow-lg flex justify-center items-center">
+       <i class="fa-solid fa-location-dot text-[30px]" style="color: #ffffff;"></i>
+      </div>
+
+      <div class="bg-blue-800  hover:bg-blue-500 transition duration-700 h-[100px] w-[100px] rounded-full shadow-lg flex justify-center items-center">
+        <i class="fa-solid fa-phone text-[30px]" style="color: #ffffff;"></i>
+       </div>
+
+       <div class="bg-blue-800  hover:bg-blue-500 transition duration-700 h-[100px] w-[100px] rounded-full shadow-lg flex justify-center items-center">
+        <i class="fa-solid fa-envelope text-[30px]" style="color: #ffffff;"></i>
+       </div>
+    </div>
+    <div class="flex flex-row justify-center items-center gap-[300px] mt-4">
+      <h3 class="text-white text-[18px ]">Barguna sadar, Barguna</h3>
+      <h3 class="text-white text-[18px ]">+8801304130712</h3>
+      <h3 class="text-white text-[18px ]">almd88560@gmial.com</h3>
+    </div>
+
+    <h1 class="text-white text-center text-[40px] mt-10">FOLLOW US</h1>
+    <div class="flex flex-row justify-center items-center mt-8">
+      <div class=" flex justify-center items-center bg-white h-10 w-60 gap-3">
+        <a href="https://www.facebook.com/profile.php?id=100071042693556" class="hover:shadow-xl hover:text-black"><i class="fa-brands fa-facebook text-[30px] hover:shadow-xl hover:text-black" style="color: #273de6;"></i>
+        </a>
+        <a href="#" class="hover:shadow-xl hover:text-black"> <i class="fa-brands fa-whatsapp text-[30px] hover:shadow-xl hover:text-blue-500" style="color: #273de6;"></i></a>
+        <a href="#" class="hover:shadow-xl hover:text-black"><i class="fa-brands fa-square-instagram text-[30px] hover:shadow-xl hover:text-blue-500" style="color: #273de6;"></i></a>
+        <a href="https://www.youtube.com/" class="hover:shadow-xl hover:text-black"> <i class="fa-brands fa-youtube text-[30px] hover:shadow-xl hover:text-blue-500" style="color: #273de6;"></i></a>
+      </div>
+    </div>
+
+
+
+     <div class="flex flex-row justify-center items-center mt-12">
+       <hr class="text-white w-[1200px]">
+     </div>
+     
+      <h5 class="text-blue-600 text-center mt-5"> <span class="text-white shadow-xl">©</span> 2024 All Rights Reserved ।। Design by <span class="text-white">MD. AL RAFI BISWAS</span></h5>
+  </div>
+</section>
+
+<!-- 8th-option-end -->
+
+
+
+
+  
+  <script src="https://kit.fontawesome.com/112ceb26ba.js" crossorigin="anonymous"></script>
+</body>
+</html>
